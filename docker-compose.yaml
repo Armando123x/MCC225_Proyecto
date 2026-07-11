@@ -1,0 +1,27 @@
+version: '3.6'
+
+services:
+  retinanet:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: "nvidia"
+              count: all
+              capabilities: [gpu]
+
+    volumes:
+      - ./app:/app  # Monta el directorio local en /app dentro del contenedor
+
+    command: ["sleep", "infinity"]  # Comando que se ejecutará al iniciar el contenedor
+    shm_size: "8gb"
+    ports:
+      - "8887:8888"
+
+    entrypoint: ["bash", "-c", "jupyter lab --ip='0.0.0.0' --port=8888 --no-browser --allow-root"]
+
+
