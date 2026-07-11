@@ -1,2 +1,52 @@
-test.ipynb
-figs/
+./app/test.ipynb
+./app/figs/
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter temporales
+.ipynb_checkpoints/
+
+# Entornos virtuales
+venv/
+env/
+.venv/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Archivos temporales
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+# Archivos de configuración local
+.env
+.vscode/
+.idea/
+
+# Builds / paquetes generados
+build/
+dist/
+*.egg-info/
+
+# Cachés comunes de herramientas
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Archivos temporales de notebooks
+*.nbconvert.ipynb
+
+# Archivos grandes generados (ajusta según tu proyecto)
+checkpoints/
+runs/
+wandb/
